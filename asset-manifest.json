@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Yaroslav-ppp/goit-react-hw-01-components/static/css/main.7acaea2f.css",
+    "main.js": "/Yaroslav-ppp/goit-react-hw-01-components/static/js/main.bc46ddd9.js",
+    "index.html": "/Yaroslav-ppp/goit-react-hw-01-components/index.html",
+    "main.7acaea2f.css.map": "/Yaroslav-ppp/goit-react-hw-01-components/static/css/main.7acaea2f.css.map",
+    "main.bc46ddd9.js.map": "/Yaroslav-ppp/goit-react-hw-01-components/static/js/main.bc46ddd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.bc46ddd9.js"
+  ]
+}
