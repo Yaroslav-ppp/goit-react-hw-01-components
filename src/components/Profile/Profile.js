@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-export default function Profile({ username, tag, location, avatar , stats }) {
+export default function Profile({ username, tag, location, avatar, stats }) {
   // const {username, tag, location, avatar, stats} = props;
 
 return (
@@ -36,11 +36,13 @@ return (
 }
 
 Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.object
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.objectOf(
+    PropTypes.number.isRequired,
+  ).isRequired
 
-};
+}
 

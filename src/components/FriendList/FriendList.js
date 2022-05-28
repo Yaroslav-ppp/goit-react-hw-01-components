@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import FriendListItem from './FriendListItem.js';
+import FriendListItem from '../FriendListItem/FriendListItem.js';
 // import friends from './friends.json';
 export default function FriendList({friends}) {
   return (
@@ -25,7 +25,8 @@ export default function FriendList({friends}) {
 
 FriendList.propTypes = {
  
-    friends: PropTypes.array,
+    friends: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.number.isRequired
+    })).isRequired
     
- 
-     };
+     }

@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 export default function Statistics({ title, stats }) {
-    // const {username, tag, location, avatar, stats} = props;
-    const isTitle = true;
+ 
   return (
 <section className = "statistics">
-{isTitle &&
+{title &&
 <h2 className = "title">{title}</h2>
 }
   <ul className = "stat-list">
@@ -21,8 +20,13 @@ export default function Statistics({ title, stats }) {
 Statistics.propTypes = {
 
  title: PropTypes.string,
-//  stats: PropTypes.array,
- label: PropTypes.string,
- percentage: PropTypes.number
+ stats: PropTypes.arrayOf(
+  PropTypes.shape({
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired
+
+  })
+  )
  
-  };
+  }

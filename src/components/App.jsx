@@ -1,11 +1,10 @@
-import Profile from './Profile.js';
+import Profile from './Profile/Profile.js';
 import user from './user.json';
-import Statistics from './Statistics.js';
+import Statistics from './Statistics/Statistics.js';
 import data from './data.json';
-import FriendList from './FriendList.js';
-// import FriendListItem from './FriendListItem.js';
+import FriendList from './FriendList/FriendList.js';
 import friends from './friends.json';
-import TransactionHistory from './TransactionHistory.js';
+import TransactionHistory from './TransactionHistory/TransactionHistory.js';
 import transactions from './transactions.json';
 
 
@@ -44,21 +43,11 @@ export function App() {
       
       <FriendList
      friends={friends} 
-     
-    //   {...friends.map(friend => (
-        
-    //   <FriendListItem
-    //   key={friend.id}
-    //  avatar={friend.avatar}
-    //  name={friend.name}
-    //  isOnline = {friend.isOnline}
-    //    />
-    //    ))} 
+  
        />
     
       
       <TransactionHistory 
-    
     
       items={transactions}
      
