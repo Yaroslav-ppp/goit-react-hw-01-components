@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 
 export const StatisticsCard = styled.section`
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 8px;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-left: 650px;
 `;
