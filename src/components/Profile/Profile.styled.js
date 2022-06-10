@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 
 export const UserCard = styled.div`
   width: 294px;
-  border-radius: 5px;
+  border-radius: 8px;
+  overflow: hidden;
   margin: 10px auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
