@@ -10,18 +10,7 @@ import { Container } from './App.styled.jsx';
 
 export default function App() {
   return (
-    <Container
-  
-      // style={{
-      //   height: '100vh',
-      //   display: 'flex',
-      //   justifyContent: 'center',
-      //   alignItems: 'center',
-      //   fontSize: 12,
-      //   color: '#010101',
-      // }}
-    >
-      {/* React homework template */}
+    <Container>
       <Profile
         username={user.username}
         tag={user.tag}
@@ -29,25 +18,12 @@ export default function App() {
         avatar={user.avatar}
         stats={user.stats}
       />
-      
-      <Statistics
-     
-       title="Upload stats" stats={data}/>
-    
-      
-      
-      <FriendList
-     friends={friends} 
-  
-       />
-    
-      
-      <TransactionHistory
-   
-      items={transactions}
-     
-      />
-    
+
+      <Statistics title="Upload stats" stats={data} />
+
+      <FriendList friends={friends} />
+
+      <TransactionHistory items={transactions} />
     </Container>
   );
 }
