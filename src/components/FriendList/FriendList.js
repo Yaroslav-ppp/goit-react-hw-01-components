@@ -1,24 +1,22 @@
+// import { css } from '@emotion/react';
 import PropTypes from 'prop-types';
 import FriendListItem from '../FriendListItem/FriendListItem.js';
-// import friends from './friends.json';
+import {List} from './FriendList.styled'
 export default function FriendList({friends}) {
   return (
   
-<ul className="friend-list"
-// friends={friends} 
+<List>
 
->
-
-{friends.map(friend => (
+{friends.map(({id, avatar, name, isOnline})=> (
         <FriendListItem
-        key={friend.id}
-         avatar={friend.avatar}
-         name={friend.name}
-         isOnline = {friend.isOnline}
+        key={id}
+         avatar={avatar}
+         name={name}
+         isOnline = {isOnline}
            />
            ))} 
            
-</ul>
+</List>
   );
 }
 

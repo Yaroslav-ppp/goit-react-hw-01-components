@@ -1,37 +1,49 @@
 import PropTypes from 'prop-types';
+import {UserCard} from './Profile.styled'
+import {UserAvatar} from './Profile.styled'
+import {Name} from './Profile.styled'
+import {Tag} from './Profile.styled'
+import {Location} from './Profile.styled'
+import {Stats} from './Profile.styled'
+import {StatsParametr} from './Profile.styled'
+import {Label} from './Profile.styled'
+import {Quantity} from './Profile.styled'
+import {Description} from './Profile.styled'
+
+
 export default function Profile({ username, tag, location, avatar, stats }) {
-  // const {username, tag, location, avatar, stats} = props;
+
 
 return (
-<div className = "profile">
-  <div className = "description">
-    <img
+<UserCard>
+  <Description>
+    <UserAvatar
       src = {avatar}
-     className = "avatar"
+    
       alt = "User avatar"
      
     
     />
-    <p className = "name">{username}</p>
-    <p className = "tag">@{tag}</p>
-    <p className = "location">{location}</p>
-  </div>
+    <Name>{username}</Name>
+    <Tag>@{tag}</Tag>
+    <Location>{location}</Location>
+  </Description>
 
-  <ul className = "stats">
-    <li>
-      <span className = "label">Followers</span>
-      <span className = "quantity">{stats.followers}</span>
-    </li>
-    <li>
-      <span className = "label">Views</span>
-      <span className = "quantity">{stats.views}</span>
-    </li>
-    <li>
-      <span className = "label">Likes</span>
-      <span className = "quantity">{stats.likes}</span>
-    </li>
-  </ul>
-</div>
+  <Stats>
+    <StatsParametr>
+      <Label>Followers</Label>
+      <Quantity>{stats.followers}</Quantity>
+    </StatsParametr>
+    <StatsParametr>
+      <Label>Views</Label>
+      <Quantity>{stats.views}</Quantity>
+    </StatsParametr>
+    <StatsParametr>
+      <Label>Likes</Label>
+      <Quantity>{stats.likes}</Quantity>
+    </StatsParametr>
+  </Stats>
+</UserCard>
 );
 }
 

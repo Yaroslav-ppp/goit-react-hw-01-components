@@ -1,32 +1,54 @@
+// import data from '../data.json';
 import PropTypes from 'prop-types';
-export default function Statistics({ title, stats }) {
+import {StatisticsCard} from './Statistics.styled'
+import {Title} from './Statistics.styled'
+import {StatList} from './Statistics.styled'
+import {Item} from './Statistics.styled'
+import {Label} from './Statistics.styled'
+import {Percentage} from './Statistics.styled'
+
+export default function Statistics({title, stats}) {
  
   return (
-<section className = "statistics">
+<StatisticsCard>
 {title &&
-<h2 className = "title">{title}</h2>
+<Title>{title}</Title>
 }
-  <ul className = "stat-list">
-    <li className = "item">
-      <span className = "label">{stats.label}</span>
-      <span className = "percentage">{stats.percentage}</span>
-    </li>
-    
-  </ul>
-</section>
+
+  <StatList>
+  {stats.map(({id, label, percentage}) => (
+    <Item key={id} 
+    style={{backgroundColor: getRandomHexColor()}}
+    >
+   
+      <Label>{label}</Label>
+     
+      <Percentage>{percentage}%</Percentage>
+     
+    </Item>
+  ))}
+  </StatList>
+
+</StatisticsCard>
   );
 }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+
+
+
+
 
 Statistics.propTypes = {
 
  title: PropTypes.string,
  stats: PropTypes.arrayOf(
-  PropTypes.shape({
+  PropTypes.exact({
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   percentage: PropTypes.number.isRequired
 
-  })
-  )
+  }))
  
   }
