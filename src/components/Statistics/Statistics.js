@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import getRandomHexColor from '../Helpers/getRandomHexColor.js';
 import { StatisticsCard } from './Statistics.styled';
 import { Title } from './Statistics.styled';
 import { StatList } from './Statistics.styled';
@@ -20,9 +21,6 @@ export default function Statistics({ title, stats }) {
       </StatList>
     </StatisticsCard>
   );
-}
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
 Statistics.propTypes = {
